@@ -1,4 +1,4 @@
-require "./db/lib/import"
+require "import"
 
 namespace :import_csv do
 end
