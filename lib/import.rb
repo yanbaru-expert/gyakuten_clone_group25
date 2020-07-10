@@ -2,12 +2,23 @@
 require "csv"
 
 class Import
-  def self.csv_data(path:)
+  def self.csv_data(path: "db/csv_data/aws_text_data.csv")
     # CSVファイルの（１行目をキーとして）各行のデータを配列に格納する
     # CSVファイルのカラム名と，テーブルのカラム名を一致させておく必要がある
     # row は CSV::Row クラスである。これはモデルの引数として渡せないのでハッシュに変換しておく。
     list = []
     CSV.foreach(path, headers: true) { |row| list << row.to_h }
-    list
+    
+    puts "インポート処理を開始"
+
+    begin
+      AwsText.transaction do
+        AwsText.create!(list)
+      end
+      puts "インポート完了！！"
+    rescue => e
+      puts "インポートに失敗！！「エラー内容： #{e}」"
+    end
+    
   end
 end
