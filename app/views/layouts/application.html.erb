@@ -4,12 +4,15 @@
     <title>GyakutenCloneGroup</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <!-- レスポンシブ対応用に以下1行追加 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <header>
+       <button type="button" class="btn btn-primary">Primary</button>
       <% if user_signed_in? %>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
       <% else %>
