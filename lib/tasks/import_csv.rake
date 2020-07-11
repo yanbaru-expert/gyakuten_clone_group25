@@ -4,7 +4,18 @@ namespace :import_csv do
   desc "「aws_text_data.csv」 を 「aws_texts」 テーブルにインポートするタスク"
 
   task aws_texts: :environment do
-    path = File.join Rails.root,"db/csv_data/aws_text_data.csv"
-    Import.csv_data(path: path)
+    
+    Import.csv_data(path: "db/csv_data/aws_text_data.csv")
+
+    puts "インポート処理を開始"
+    binding.pry
+    begin
+      AwsText.transaction do
+        AwsText.create!(list)
+      end
+      puts "インポート完了！！"
+    rescue => e
+      puts "インポートに失敗！！「エラー内容： #{e}」"
+    end
   end
 end
