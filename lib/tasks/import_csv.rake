@@ -8,7 +8,7 @@ namespace :import_csv do
     Import.csv_data(path: "db/csv_data/aws_text_data.csv")
 
     puts "インポート処理を開始"
-    binding.pry
+    
     begin
       AwsText.transaction do
         AwsText.create!(list)
