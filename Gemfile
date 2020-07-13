@@ -18,7 +18,7 @@ gem 'pry-byebug'
 gem 'pry-rails'
 gem 'pry-doc'
 
-# 7_日本語化
+# 日本語化
 gem 'rails-i18n'
 gem 'devise-i18n'
 
