@@ -13,6 +13,13 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise'
 
+#Bootstrap向け
+gem 'bootstrap', '~> 4.3.1'
+gem 'bootstrap-sass'
+gem 'jquery-rails'
+gem 'devise-bootstrap-views'
+gem 'activeadmin'
+
 #1_開発環境の整備
 gem 'pry-byebug'
 gem 'pry-rails'
