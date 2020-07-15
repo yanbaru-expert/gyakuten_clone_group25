@@ -18,6 +18,10 @@ gem 'pry-byebug'
 gem 'pry-rails'
 gem 'pry-doc'
 
+# 日本語化
+gem 'rails-i18n'
+gem 'devise-i18n'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
