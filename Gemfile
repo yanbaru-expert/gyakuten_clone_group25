@@ -22,6 +22,9 @@ gem 'pry-doc'
 gem 'rails-i18n'
 gem 'devise-i18n'
 
+# 管理者画面
+gem 'activeadmin'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
