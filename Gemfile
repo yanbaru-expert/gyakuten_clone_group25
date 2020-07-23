@@ -24,6 +24,7 @@ gem 'devise-i18n'
 
 # 管理者画面
 gem 'activeadmin'
+gem 'devise-bootstrap-views'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
