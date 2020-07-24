@@ -11,3 +11,11 @@
   padding: 1rem;
   text-align: center;
 }
+
+.alert-notice {
+  @extend .alert-success;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
