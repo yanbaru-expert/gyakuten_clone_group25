@@ -39,10 +39,10 @@ namespace :import_csv do
     list = Import.csv_data(path: "db/csv_data/question_data.csv")
     puts "インポート処理を開始"
     begin
-    Question.transaction do
-      Question.create!(list)
-    end
-    puts "インポート完了!!"
+      Question.transaction do
+        Question.create!(list)
+      end
+      puts "インポート完了!!"
     rescue => e
       puts "インポート失敗!! 「エラー内容 : #{e}」"
     end
