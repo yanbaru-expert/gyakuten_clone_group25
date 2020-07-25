@@ -1,0 +1,33 @@
+<div class="aws_header mb-4">
+  <div class="title">
+    <h2 class="text-center">AWS講座</h2>
+  </div>
+</div>
+<div class="container">
+  <div class="contents">
+    <div class="alert-message">
+      <p class="text-left">
+        注意！！！：AWSのEC2やRDSは有料サービスとなります。無駄な料金を請求されないため
+        にも、不要なインスタンスは停止・削除をしてください。
+      </p>
+    </div>
+    <section id="table">
+      <table class="table table-striped">
+        <thead>
+          <tr class="bg-primary text-white">
+            <th scope="col">No.</th>
+            <th scope="col" class="text-left pl-5">内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @aws_texts.each.with_index(1) do |text, i| %>
+            <tr>
+              <th scope="row" class="font-weight-normal"><%= i %></th>
+              <td class="text-left pl-5"><%= link_to "#{text.title}", "#" %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</div>
