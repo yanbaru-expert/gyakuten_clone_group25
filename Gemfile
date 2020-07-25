@@ -22,6 +22,8 @@ gem 'pry-doc'
 gem 'rails-i18n'
 gem 'devise-i18n'
 
+# 管理者画面
+gem 'activeadmin'
 gem 'devise-bootstrap-views'
 
 group :development, :test do
