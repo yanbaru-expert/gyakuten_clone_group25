@@ -1,2 +1,8 @@
-<%= markdown(@aws_text.title).html_safe %>
-<%= markdown(@aws_text.content).html_safe %>
+<div class="aws-text-container">
+  <div class="aws-title">
+    <%= markdown(@aws_text.title).html_safe %>
+  </div>
+  <div class="aws-body">
+    <%= markdown(@aws_text.content).html_safe %>
+  </div>
+</div>
