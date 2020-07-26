@@ -11,12 +11,7 @@
   <body>
     <header>
       <%= render "shared/header" %>
-      <% flash.each do |msg_type, msg| %>
-        <div class="alert alert-<%= msg_type %>" role="alert">
-          <a href="#" class="close" data-dismiss="alert">×</a>
-          <%= msg %>
-        </div>
-      <% end %>
+      <%= render "shared/header_flash" %>
     </header>
     <main>
       <div class="base-container">
