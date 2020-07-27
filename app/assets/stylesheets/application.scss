@@ -1,13 +1,32 @@
-/*
- *= require_tree .
- *= require_self
- */
- 
- @import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 
 .base-container {
   max-width: 768px;
   margin: 0 auto;
   padding: 1rem;
   text-align: center;
+}
+
+.alert-notice {
+  @extend .alert-success;
+}
+
+.alert-alert {
+  @extend .alert-danger; 
+}
+
+.aws-text-container {
+  text-align: left;
+}
+
+.aws-title {
+  padding-top: 7rem;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.aws-body h2 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 30px 0 15px 0;
 }
