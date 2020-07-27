@@ -23,7 +23,7 @@
           <% @aws_texts.each.with_index(1) do |text, i| %>
             <tr>
               <th scope="row" class="font-weight-normal"><%= i %></th>
-              <td class="text-left pl-5"><%= link_to "#{text.title}", "#" %></td>
+              <td class="text-left pl-5"><%= link_to "#{text.title}", aws_text_path(text) %></td>
             </tr>
           <% end %>
         </tbody>
