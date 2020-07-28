@@ -17,11 +17,11 @@
   display: flex;
 }
 
-.title, .date {
+.question_title, .question_date {
   width: 50%; 
 }
 
-.date {
+.question_date {
   text-align: right;
   font-size: 17px;
   color: #888888;

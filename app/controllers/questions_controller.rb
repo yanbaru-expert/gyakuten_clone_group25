@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
   def index
-    @questions = Question.all
+    @questions = Question.order("updated_at")
   end
 end
