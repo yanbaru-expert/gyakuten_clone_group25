@@ -1,0 +1,10 @@
+<% @questions.each do |question| %>
+  <div class="questions">
+    <div class="question_title">
+      <%= question.title %>
+    </div>
+    <div class="question_date">
+      質問日&nbsp;&nbsp;&nbsp;<%= l(question.updated_at, format: :middle)%>
+    </div>
+  </div>
+<% end %>
