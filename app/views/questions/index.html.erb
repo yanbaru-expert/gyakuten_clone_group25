@@ -1,10 +1,12 @@
 <% @questions.each do |question| %>
-  <div class="questions">
-    <div class="question_title">
-      <%= question.title %>
+  <a href = "/questions/<%=question.id%>" >
+    <div class="questions">
+      <div class="question_title">
+        <%= question.title %>
+      </div>
+      <div class="question_date">
+        質問日&nbsp;&nbsp;&nbsp;<%= l(question.updated_at, format: :middle)%>
+      </div>
     </div>
-    <div class="question_date">
-      質問日&nbsp;&nbsp;&nbsp;<%= l(question.updated_at, format: :middle)%>
-    </div>
-  </div>
+  </a>
 <% end %>
