@@ -6,7 +6,5 @@ class CreateQuestions < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
-    change_column_null(:questions, :title, false)
-    change_column_null(:questions, :detail, false)
   end
 end
