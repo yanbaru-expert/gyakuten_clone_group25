@@ -1,5 +1,5 @@
 <% @questions.each do |question| %>
-  <a href = "/questions/<%=question.id%>" >
+  <%=link_to  question_path(question) do%>
     <div class="questions">
       <div class="question_title">
         <%= question.title %>
@@ -8,5 +8,5 @@
         質問日&nbsp;&nbsp;&nbsp;<%= l(question.updated_at, format: :middle)%>
       </div>
     </div>
-  </a>
+  <% end %>
 <% end %>
