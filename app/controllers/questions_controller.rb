@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+
   def index
     @questions = Question.order(id: :desc)
     @question = Question.new
@@ -13,10 +14,6 @@ class QuestionsController < ApplicationController
       flash.now[:alert] = "記入漏れがあります。"
       render :index
     end
-  end
-
-  def show
-      @question = Question.find(params[:id])
   end
 
   private

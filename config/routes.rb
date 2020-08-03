@@ -5,7 +5,5 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: "movies#index"
   resources :aws_texts
-  resources :questions, only: [:index, :show, :create] do
-    resources :solutions, only: [:index, :create]
+  resources :questions, only: [:index, :show, :create] 
   end
-end
