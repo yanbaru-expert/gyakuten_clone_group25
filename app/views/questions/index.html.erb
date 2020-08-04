@@ -1,18 +1,6 @@
-<section id="questions">
-  <% @questions.each do |question| %>
-    <div class="question-container">
-      <%= link_to question_path(question) do%>
-        <div class="question">
-          <div class="question-row">
-            <div class="question-title">
-              <p><%=question.title%></p>
-            </div>
-            <div class="question-right">
-              <p>質問日 <%=l(question.updated_at, format: :middle)%></p>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
+<% @questions.each do |question| %>
+  <%= link_to question_path(question) do%>
+    <%=question.title%>
+    質問日 <%=l(question.updated_at, format: :middle)%>
   <% end %>
-</section>
+<% end %>
