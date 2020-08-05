@@ -1,9 +1,9 @@
 @import "bootstrap/scss/bootstrap";
 
 .base-container {
-  max-width: 768px;
+  max-width: 1150px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: center;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .alert-alert {
-  @extend .alert-danger; 
+  @extend .alert-danger;
 }
 
 .aws-text-container {
@@ -41,4 +41,11 @@
   font-size: 1.7rem;
   font-weight: bold;
   padding: 30px 0 15px 0;
+}
+
+.movie-title {
+  height: 180px;
+  font-size: 1.7rem;
+  line-height: 1.5em;
+  text-align: left;
 }
