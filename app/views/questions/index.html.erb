@@ -1,6 +1,10 @@
 <% @questions.each do |question| %>
-  <%= link_to question do%>
-    <%=question.title%>
-    <%=question.created_at.strftime("%Y年%m月%d日")%>
-  <% end %>
+  <div class="questions">
+    <div class="question_title">
+      <%= question.title %>
+    </div>
+    <div class="question_date">
+      質問日&nbsp;&nbsp;&nbsp;<%= l(question.updated_at, format: :middle)%>
+    </div>
+  </div>
 <% end %>
