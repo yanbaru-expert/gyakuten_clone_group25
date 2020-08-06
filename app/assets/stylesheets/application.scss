@@ -8,7 +8,7 @@
 }
 
 #question {
-  text-align :left;
+  text-align: left;
 }
 
 #question .title {
@@ -16,7 +16,7 @@
 }
 
 #question .detail {
-  padding-top : 50px;
+  padding-top: 50px;
 }
 
 .alert-notice {
@@ -48,4 +48,9 @@
   font-size: 1.7rem;
   line-height: 1.5em;
   text-align: left;
+}
+
+.paginate {
+  display: flex;
+  justify-content: center;
 }
