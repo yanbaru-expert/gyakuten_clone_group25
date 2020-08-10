@@ -1,7 +1,7 @@
 @import "bootstrap/scss/bootstrap";
 
 .base-container {
-  max-width: 768px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 1.5rem;
   text-align: center;
@@ -84,12 +84,15 @@
 }
 
 #questions a {
+  max-width: 768px;
   text-decoration: none;
   display: block;
   color: #333333;
   border: solid 2px #505050;
   border-radius: 10px;
   transition: .4s;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #questions a .title {
@@ -104,4 +107,16 @@
 
 #questions .question-container {
   padding: 30px 0;
+}
+
+.form-control{
+  max-width: 768px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn-primary {
+  max-width: 768px; 
+  margin-right: auto;
+  margin-left: auto;
 }
