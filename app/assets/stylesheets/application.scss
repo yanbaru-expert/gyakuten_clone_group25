@@ -21,6 +21,8 @@
 
 #question {
   text-align: left;
+  width: 800px;
+  margin: 0 auto;
 }
 
 #question .title {
@@ -28,6 +30,10 @@
 }
 
 #question .detail {
+  padding-top: 50px;
+}
+
+#question .solution {
   padding-top: 50px;
 }
 
