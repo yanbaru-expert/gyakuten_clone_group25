@@ -6,9 +6,8 @@ class QuestionsController < ApplicationController
   
   def show
     @question = Question.find(params[:id])
-    @solutions = @question.solutions
-    @solution = Solution.new
-    # @solution = @question.solutions.new
+    @solutions = Solution.where(question_id: @question.id)
+    @solution = @question.solutions.new
   end
   
   def create

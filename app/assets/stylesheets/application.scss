@@ -23,18 +23,26 @@
   text-align: left;
   width: 800px;
   margin: 0 auto;
-}
 
-#question .title {
-  padding-top: 50px;
-}
+  h3 {
+    font-size: 20px;
+  }
+  
+  .title {
+    padding-top: 50px;
+  }
 
-#question .detail {
-  padding-top: 50px;
-}
+  .detail {
+    padding-top: 50px;
+  }
 
-#question .solution {
-  padding-top: 50px;
+  .solution {
+    padding-top: 50px;
+
+    hr {
+      padding-bottom: 20px;
+    }
+  }
 }
 
 .alert-notice {
@@ -97,8 +105,20 @@
   }
 }
 
-#container p {
-  font-size: 17px;
+.container {
+  padding: 20px 0px 10px 0px;
+  text-align :left;
+  width: 800px;
+
+  p {
+    font-size: 17px;
+  }
+
+  h1 {
+    padding: 20px 0px 10px 0px;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
 }
 
 #questions a {
