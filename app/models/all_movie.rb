@@ -1,0 +1,2 @@
+class AllMovie < ApplicationRecord
+end

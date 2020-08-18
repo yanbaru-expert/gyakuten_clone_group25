@@ -47,4 +47,19 @@ namespace :import_csv do
       puts "インポート失敗!! 「エラー内容 : #{e}」"
     end
   end
+
+
+  desc "「all_movie_data.csv」を「all_movies」テーブルにimportするタスク"
+  task all_movie: :environment do
+    list = Import.csv_data(path: "db/csv_data/all_movie_data.csv")
+    puts "インポート処理を開始"
+    begin
+      AllMovie.transaction do
+        AllMovie.create!(list)
+      end
+      puts "インポート完了!!"
+    rescue => e
+      puts "インポート失敗!! 「エラー内容 : #{e}」"
+    end
+  end
 end
