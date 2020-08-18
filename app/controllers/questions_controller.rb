@@ -3,8 +3,11 @@ class QuestionsController < ApplicationController
     @questions = Question.order(created_at: "DESC")
     @question = Question.new
   end
+  
   def show
     @question = Question.find(params[:id])
+    @solutions = Solution.where(question_id: @question.id)
+    @solution = @question.solutions.new
   end
   
   def create
