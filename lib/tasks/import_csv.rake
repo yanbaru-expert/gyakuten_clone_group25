@@ -18,15 +18,15 @@ namespace :import_csv do
     end
   end
 
-  desc "「movie_data.csv」 を 「movies」 テーブルにインポートするタスク"
+  desc "「all_movie_data.csv」 を 「movies」 テーブルにインポートするタスク"
   task movies: :environment do
-    movie_data_list = Import.csv_data(path: "db/csv_data/movie_data.csv")
+    all_movie_data_list = Import.csv_data(path: "db/csv_data/all_movie_data.csv")
 
     puts "インポート処理を開始"
 
     begin
       Movie.transaction do
-        Movie.create!(movie_data_list)
+        Movie.create!(all_movie_data_list)
       end
       puts "インポート完了！！"
     rescue => e
@@ -47,4 +47,5 @@ namespace :import_csv do
       puts "インポート失敗!! 「エラー内容 : #{e}」"
     end
   end
+
 end
