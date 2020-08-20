@@ -5,7 +5,11 @@ class Movie < ApplicationRecord
 
   SELECTION_MOVIIES = %w[Basic Git Ruby].push("Ruby on Rails")
 
-  def self.select_movies
-    where("category IN(?)", SELECTION_MOVIIES)
+  def self.select_movies(category)
+    if category.present?
+      where(category: category)
+    else
+      where("category IN(?)", SELECTION_MOVIIES)
+    end
   end
 end
