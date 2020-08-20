@@ -3,7 +3,7 @@ class Movie < ApplicationRecord
   validates :url, presence: true
   validates :category, presence: true
 
-  SELECTION_MOVIIES = %w[Basic Git Ruby].push("Ruby on Rails")
+  SELECTION_MOVIIES = %W[Basic Git Ruby #{"Ruby on Rails"}]
 
   def self.select_movies(category)
     if category.present?
