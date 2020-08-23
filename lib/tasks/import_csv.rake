@@ -48,4 +48,17 @@ namespace :import_csv do
     end
   end
 
+  desc "「line_data.csv」を「lines」テーブルにimportするタスク"
+  task lines: :environment do
+    list = Import.csv_data(path: "db/csv_data/line_data.csv")
+    puts "インポート処理を開始"
+    begin
+      Line.transaction do
+        Line.create!(list)
+      end
+      puts "インポート完了!!"
+    rescue => e
+      puts "インポート失敗!! 「エラー内容 : #{e}」"
+    end
+  end
 end
