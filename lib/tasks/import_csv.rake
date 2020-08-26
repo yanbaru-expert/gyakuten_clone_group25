@@ -18,15 +18,15 @@ namespace :import_csv do
     end
   end
 
-  desc "「movie_data.csv」 を 「movies」 テーブルにインポートするタスク"
+  desc "「all_movie_data.csv」 を 「movies」 テーブルにインポートするタスク"
   task movies: :environment do
-    movie_data_list = Import.csv_data(path: "db/csv_data/movie_data.csv")
+    all_movie_data_list = Import.csv_data(path: "db/csv_data/all_movie_data.csv")
 
     puts "インポート処理を開始"
 
     begin
       Movie.transaction do
-        Movie.create!(movie_data_list)
+        Movie.create!(all_movie_data_list)
       end
       puts "インポート完了！！"
     rescue => e
@@ -41,6 +41,34 @@ namespace :import_csv do
     begin
       Question.transaction do
         Question.create!(list)
+      end
+      puts "インポート完了!!"
+    rescue => e
+      puts "インポート失敗!! 「エラー内容 : #{e}」"
+    end
+  end
+
+  desc "「text_data.csv」を「texts」テーブルにimportするタスク"
+  task texts: :environment do
+    list = Import.csv_data(path: "db/csv_data/text_data.csv")
+      puts "インポート処理を開始"
+    begin
+      Text.transaction do
+        Text.create!(list)
+      end
+      puts "インポート完了!!"
+    rescue => e
+      puts "インポート失敗!!　「エラー内容　: #{e}」"
+    end
+  end
+
+  desc "「line_data.csv」を「lines」テーブルにimportするタスク"
+  task lines: :environment do
+    list = Import.csv_data(path: "db/csv_data/line_data.csv")
+    puts "インポート処理を開始"
+    begin
+      Line.transaction do
+        Line.create!(list)
       end
       puts "インポート完了!!"
     rescue => e
