@@ -55,7 +55,12 @@ namespace :import_csv do
     begin
       Text.transaction do
         Text.create!(list)
-
+      end
+      puts "インポート完了!!"
+    rescue => e
+      puts "インポート失敗!!　「エラー内容　: #{e}」"
+    end
+  end
 
   desc "「line_data.csv」を「lines」テーブルにimportするタスク"
   task lines: :environment do
@@ -64,7 +69,6 @@ namespace :import_csv do
     begin
       Line.transaction do
         Line.create!(list)
-
       end
       puts "インポート完了!!"
     rescue => e
