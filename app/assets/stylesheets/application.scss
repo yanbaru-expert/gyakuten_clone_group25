@@ -158,19 +158,3 @@
   margin-right: auto;
   margin-left: auto;
 }
-
-//質問詳細ページのview数の表示
-.view-contain {
-  position: relative;
-
-  & .page-views {
-    display: inline-block;
-    position: absolute;
-    left: 80%;
-    height: 31px;
-    padding: 0 5px;
-    border: 1.5px solid #005FFF;
-    background-color: #CCFFFF;
-    border-radius: 10% 10%;
-  }
-}
