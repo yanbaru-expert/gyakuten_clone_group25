@@ -10,8 +10,16 @@
   </head>
   <body>
     <header>
+    <%if yield(:line) %>
+      <div class="line"%>
+        <%= render "shared/header" %>
+      </div> 
+    <%else%>
+    <div class="main"%>
       <%= render "shared/header" %>
-      <%= render "shared/flash" %>
+    </div> 
+    <%end%>
+    <%= render "shared/flash" %>
     </header>
     <main>
       <div class="base-container">
