@@ -1,4 +1,7 @@
 <section id="question">
+  <div class="view-contain">
+    <span class="page-views"><%= @question.impressions_count %> Views</span>
+  </div>
   <div class="title">
     <h3>【質問】</h3>
     <p><%= markdown(@question.title).html_safe%></p>
