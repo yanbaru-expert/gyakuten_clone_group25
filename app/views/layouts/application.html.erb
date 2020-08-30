@@ -10,10 +10,8 @@
   </head>
   <body>
     <header>
-    <%if content_for?(:line)%>
-      <div class="line fixed-top">
-        <%= render "shared/header"%>
-      </div>
+    <%if content_for? :line%>
+      <%= yield :line%>
     <%else%>
       <div class="main fixed-top">
         <%= render "shared/header" %>
@@ -27,10 +25,8 @@
       </div>
     </main>
     <footer>
-      <%if content_for?(:line)%>
-        <div class="line fixed-bottom">
-          <%= render "shared/footer"%>
-        </div>
+      <%if content_for? :line%>
+        <%= yield :line%>
       <%else%>
         <div class="main fixed-bottom">
           <%= render "shared/footer" %>
