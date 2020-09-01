@@ -6,7 +6,6 @@ class Solution < ApplicationRecord
   # validates :content, presence: true
   with_options presence: true do
     validates :content
-    validates :user_id
   end
 
   def favorited_by?(user)
