@@ -45,4 +45,30 @@ module ApplicationHelper
     markdown = Redcarpet::Markdown.new(html_render, options)
     markdown.render(text)
   end
+
+  def navbar_header
+    case controller.controller_name
+    when "lines"
+    content_tag(:div, class: "line fixed-top") do
+      render "shared/header"
+    end
+    else
+      content_tag(:div, class: "main fixed-top") do
+        render "shared/header"
+      end
+    end
+  end
+
+  def navbar_footer
+    case controller.controller_name
+    when "lines"
+      content_tag(:div, class: "line fixed-bottom") do
+        render "shared/footer"
+      end
+    else
+      content_tag(:div, class: "main fixed-bottom") do
+        render "shared/footer"
+      end
+    end
+  end
 end
