@@ -49,8 +49,8 @@ module ApplicationHelper
   def navbar_header
     case controller.controller_name
     when "lines"
-    content_tag(:div, class: "line fixed-top") do
-      render "shared/header"
+      content_tag(:div, class: "line fixed-top") do
+        render "shared/header"
     end
     else
       content_tag(:div, class: "main fixed-top") do
