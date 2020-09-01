@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  has_many :solutions, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :favorite_solutions, through: :favorites, source: :soulution
   # Include default devise modules. Others available are:
