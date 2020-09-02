@@ -18,9 +18,17 @@
       <p><%= markdown(solution.content).html_safe%></p>
       <div class="favorite-content">
         <% if solution.favorited_by?(current_user.id) %>
-          <p><%= link_to "いいねを取消す！#{solution.favorites.count}", question_solution_favorite_path(@question, solution), method: :delete%></p>
+          <p>
+            <%= link_to question_solution_favorite_path(@question, solution), method: :delete do%>
+              <span><i class="fas fa-heart mr-2"></i><%= solution.favorites.count %></span>
+            <% end %>
+          </p>
         <% else %>
-          <p><%= link_to "いいね！#{solution.favorites.count}", question_solution_favorite_path(@question, solution), method: :post%></p>
+          <p>
+            <%= link_to question_solution_favorite_path(@question, solution), method: :post do %>
+              <span><i class="far fa-heart mr-2"></i><%= solution.favorites.count %></span>
+            <% end %>
+          </p>
         <% end %>
       </div>
       <hr>
