@@ -10,7 +10,9 @@
   </head>
   <body>
     <header>
-      <%= navbar_header %>
+      <div class="<%=navbar_class%> fixed-top">
+        <%= render "shared/header"%>
+      </div>
       <%= render "shared/flash" %>
     </header>
     <main>
@@ -19,7 +21,9 @@
       </div>
     </main>
     <footer>
-      <%= navbar_footer %>
+      <div class="<%=navbar_class%> fixed-bottom">
+        <%= render "shared/footer"%>
+      </div>
     </footer>
   </body>
 </html>

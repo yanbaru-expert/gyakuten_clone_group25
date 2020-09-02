@@ -46,29 +46,12 @@ module ApplicationHelper
     markdown.render(text)
   end
 
-  def navbar_header
+  def navbar_class
     case controller.controller_name
     when "lines"
-      content_tag(:div, class: "line fixed-top") do
-        render "shared/header"
-    end
+      "line"
     else
-      content_tag(:div, class: "main fixed-top") do
-        render "shared/header"
-      end
-    end
-  end
-
-  def navbar_footer
-    case controller.controller_name
-    when "lines"
-      content_tag(:div, class: "line fixed-bottom") do
-        render "shared/footer"
-      end
-    else
-      content_tag(:div, class: "main fixed-bottom") do
-        render "shared/footer"
-      end
+      "main"
     end
   end
 end
