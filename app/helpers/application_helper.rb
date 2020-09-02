@@ -47,11 +47,6 @@ module ApplicationHelper
   end
 
   def navbar_class
-    case controller.controller_name
-    when "lines"
-      "line"
-    else
-      "main"
-    end
+    controller.controller_name == "lines" ? "line" : "main"
   end
 end
