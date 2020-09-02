@@ -3,9 +3,42 @@
 .base-container {
   max-width: 1150px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 120px 0 80px 0;
   text-align: center;
 }
+
+#contents {
+  h2 {
+    padding: 20px 0px 10px 0px;
+    font-size: 30px;
+  }
+
+  p {
+    width: 700px; 
+    margin: 0 auto;
+    padding-bottom: 15px;
+  }
+}
+
+.table-container {
+  width: 700px;
+  margin: 0 auto;
+  text-align: left;
+
+  .w-1 {
+    width: 10%;
+  }
+
+  .w-2 {
+    width: 20%;
+  }
+
+  .w-5 {
+    width: 50%;
+  }
+}
+
+
 
 //アカウント編集ページ
 #account-container {
@@ -81,24 +114,6 @@
   justify-content: center;
 }
 
-.question-row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.question_date {
-  text-align: right;
-  font-size: 17px;
-  color: #888888;
-}
-
-.question_title,
-.question_date {
-  width: 50%;
-}
-
 .field_with_errors {
   display: contents;
 
@@ -107,6 +122,7 @@
   }
 }
 
+// 質問、回答投稿フォーム
 .container {
   padding: 20px 0px 10px 0px;
   text-align: left;
@@ -122,8 +138,22 @@
     margin-bottom: 20px;
   }
 }
+// 
 
-#questions a {
+#questions {
+
+  .question {
+    padding: 10px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  a {
   max-width: 768px;
   text-decoration: none;
   display: block;
@@ -133,20 +163,21 @@
   transition: .4s;
   margin-right: auto;
   margin-left: auto;
-}
+  }
 
-#questions a .title {
-  font-size: 22px;
-  line-height: 2;
-}
+  .title {
+    font-size: 22px;
+    line-height: 2;
+  }
 
-#questions a .info {
-  padding: 10px 10px 10px 20px;
-  color: #BBBBBB;
-}
+  .info {
+    padding: 10px 10px 10px 20px;
+    color: #BBBBBB;
+  }
 
-#questions .question-container {
-  padding: 30px 0;
+  .question-container {
+    padding: 30px 0;
+  }
 }
 
 .form-control {
@@ -161,6 +192,13 @@
   margin-left: auto;
 }
 
+.main {
+  background-color: #5D99FF;
+}
+
+.line {
+  background-color: #28a745;
+}
 //質問詳細ページのview数の表示
 .view-contain {
   position: relative;
