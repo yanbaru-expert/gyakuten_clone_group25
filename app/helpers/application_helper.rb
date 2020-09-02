@@ -45,4 +45,8 @@ module ApplicationHelper
     markdown = Redcarpet::Markdown.new(html_render, options)
     markdown.render(text)
   end
+
+  def navbar_class
+    controller.controller_name == "lines" ? "line" : "main"
+  end
 end
