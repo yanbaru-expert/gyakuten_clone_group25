@@ -7,7 +7,7 @@ class Solution < ApplicationRecord
     validates :content
   end
 
-  def favorited_by?(user)
-    favorites.where(user_id: user.id).exists?
+  def favorited_by?(user_id)
+    favorites.where(user_id: user_id).exists?
   end
 end

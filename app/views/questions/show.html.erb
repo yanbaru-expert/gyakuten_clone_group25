@@ -17,7 +17,7 @@
       <h3><%= solution.present? ? "【回答 #{i}】" : ""%></h3>
       <p><%= markdown(solution.content).html_safe%></p>
       <div class="favorite-content">
-        <% if solution.favorited_by?(current_user) %>
+        <% if solution.favorited_by?(current_user.id) %>
           <p><%= link_to "いいねを取消す！#{solution.favorites.count}", question_solution_favorite_path(@question, solution), method: :delete%></p>
         <% else %>
           <p><%= link_to "いいね！#{solution.favorites.count}", question_solution_favorite_path(@question, solution), method: :post%></p>
