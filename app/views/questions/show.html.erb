@@ -16,6 +16,21 @@
     <% @solutions.each.with_index(1) do |solution,i| %>
       <h3><%= solution.present? ? "【回答 #{i}】" : ""%></h3>
       <p><%= markdown(solution.content).html_safe%></p>
+      <div class="favorite-content">
+        <% if solution.favorited_by?(current_user.id) %>
+          <p>
+            <%= link_to question_solution_favorite_path(@question, solution), method: :delete do%>
+              <span><%= icon("fas", "heart", class: "mr-2") %><%= solution.favorites.count %></span>
+            <% end %>
+          </p>
+        <% else %>
+          <p>
+            <%= link_to question_solution_favorite_path(@question, solution), method: :post do %>
+              <span><%= icon("far", "heart", class: "mr-2") %><%= solution.favorites.count %></span>
+            <% end %>
+          </p>
+        <% end %>
+      </div>
       <hr>
     <% end %>
   </div>

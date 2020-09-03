@@ -34,6 +34,9 @@ gem 'coderay'
 #質問詳細ページへのPV数の実装
 gem 'impressionist'
 
+#fontawesomeの導入
+gem 'font-awesome-sass'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
