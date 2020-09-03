@@ -4,8 +4,4 @@ class TextsController < ApplicationController
     @texts = Text.all
   end
 
-  def show
-    @texts = Text.find(params[:id])
-  end
-
 end

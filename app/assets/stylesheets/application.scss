@@ -1,4 +1,6 @@
 @import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 .base-container {
   max-width: 1150px;
@@ -14,7 +16,7 @@
   }
 
   p {
-    width: 700px; 
+    width: 700px;
     margin: 0 auto;
     padding-bottom: 15px;
   }
@@ -138,7 +140,7 @@
     margin-bottom: 20px;
   }
 }
-// 
+//
 
 #questions {
 
@@ -212,5 +214,17 @@
     border: 1.5px solid #005FFF;
     background-color: #CCFFFF;
     border-radius: 10% 10%;
+  }
+}
+
+
+#line-contents {
+  width: 500px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 2.5em;
+
+  h2 {
+    padding: 30px 0px 20px 0px;
   }
 }
