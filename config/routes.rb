@@ -11,5 +11,7 @@ Rails.application.routes.draw do
     end
   end
   resources :movies
-  resources :lines
+  resources :lines do
+    resource :read, only: :create 
+  end
 end
