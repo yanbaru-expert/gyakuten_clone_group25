@@ -14,7 +14,7 @@
         <% @lines.each.with_index(1) do |line,i| %>
         <tr>
           <td scope="row">
-            <% if line.read_by?(current_user)%>
+            <% if line.read_by?(current_user) %>
               <%="既読"%>
             <% else %>
               <%=""%>
