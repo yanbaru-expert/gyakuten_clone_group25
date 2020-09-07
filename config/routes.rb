@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
   resources :movies
 
-  resources :texts
+  resources :texts, only: [:index, :show]
 
   resources :lines
 
