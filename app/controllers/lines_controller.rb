@@ -5,7 +5,7 @@ class LinesController < ApplicationController
   end
   def show
     @line = Line.find(params[:id])
-    
-    Read.create(line_id: @line.id, user_id: current_user.id)
+    line_read = current_user.reads.new(readable: @line)
+    line_read.save
   end
 end
