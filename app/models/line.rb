@@ -5,7 +5,7 @@ class Line < ApplicationRecord
   has_many :reads, as: :readable
   
   def read_by?(user)
-    reads.where(readable_id: user.id).exists?
+    reads.where(user_id: user.id).exists?
   end
 
 end

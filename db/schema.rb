@@ -108,11 +108,13 @@ ActiveRecord::Schema.define(version: 2020_09_04_144235) do
   end
 
   create_table "reads", force: :cascade do |t|
+    t.bigint "user_id", null: false
     t.string "readable_type"
     t.bigint "readable_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["readable_type", "readable_id"], name: "index_reads_on_readable_type_and_readable_id"
+    t.index ["user_id"], name: "index_reads_on_user_id"
   end
 
   create_table "solutions", force: :cascade do |t|
@@ -145,5 +147,6 @@ ActiveRecord::Schema.define(version: 2020_09_04_144235) do
 
   add_foreign_key "favorites", "solutions"
   add_foreign_key "favorites", "users"
+  add_foreign_key "reads", "users"
   add_foreign_key "solutions", "questions"
 end
