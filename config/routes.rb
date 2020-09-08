@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   resources :lines do
     resource :read, only: :create 
   end
-  resources :texts
+  resources :texts, only: [:index, :show]
 end
