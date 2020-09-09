@@ -37,6 +37,9 @@ gem 'impressionist'
 #fontawesomeの導入
 gem 'font-awesome-sass'
 
+#検索機能の導入
+gem 'ransack'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
