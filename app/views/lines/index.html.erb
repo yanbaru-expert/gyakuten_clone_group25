@@ -15,7 +15,7 @@
         <tr>
           <td scope="row">
             <% if line.read_by?(current_user) %>
-              <%="既読"%>
+              <div id="already"><%="既読"%></div>
             <% else %>
               <%=""%>
             <% end %>

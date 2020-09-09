@@ -4,6 +4,6 @@ class Line < ApplicationRecord
   validates :contents, presence: true
   has_many :reads, as: :readable
   def read_by?(user)
-    reads.where(user_id: user.id).exists?
+    reads.where(user_id:user.id).exists?
   end
 end
