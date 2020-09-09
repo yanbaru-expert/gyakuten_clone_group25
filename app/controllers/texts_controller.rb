@@ -1,5 +1,4 @@
 class TextsController < ApplicationController
-
   def index
     @texts = Text.all
   end
@@ -7,5 +6,4 @@ class TextsController < ApplicationController
   def show
     @texts = Text.find(params[:id])
   end
-
-end 
+end
