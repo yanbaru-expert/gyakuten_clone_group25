@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: "home#index"
-  get "/", to: "home#index"
+  root to: "texts#index"
   resources :aws_texts
   resources :questions do
     resources :solutions do
