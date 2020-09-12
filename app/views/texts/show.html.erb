@@ -1,0 +1,8 @@
+<div class="texts-container">
+  <div class="texts-title">
+    <%= markdown(@texts.title).html_safe %>
+  </div>
+  <div class="texts-body">
+    <%= markdown(@texts.content).html_safe %>
+  </div>
+</div>
