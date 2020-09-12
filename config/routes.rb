@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
   resources :movies do
     resource :check, only: [:create, :destroy]
-  end
+  end 
 
   resources :texts, only: [:index, :show]
 
