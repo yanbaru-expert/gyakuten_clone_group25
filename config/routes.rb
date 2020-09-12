@@ -10,7 +10,9 @@ Rails.application.routes.draw do
       resource :favorite, only: [:create, :destroy]
     end
   end
-  resources :movies
+  resources :movies do
+    resource :check, only: [:create, :destroy]
+  end 
 
   resources :texts, only: [:index, :show]
 
