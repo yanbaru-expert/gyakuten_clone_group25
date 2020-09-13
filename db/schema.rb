@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_04_144235) do
+ActiveRecord::Schema.define(version: 2020_09_09_003847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,16 @@ ActiveRecord::Schema.define(version: 2020_09_04_144235) do
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "checks", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "checkable_type"
+    t.bigint "checkable_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["checkable_type", "checkable_id"], name: "index_checks_on_checkable_type_and_checkable_id"
+    t.index ["user_id"], name: "index_checks_on_user_id"
   end
 
   create_table "favorites", force: :cascade do |t|
@@ -118,11 +128,9 @@ ActiveRecord::Schema.define(version: 2020_09_04_144235) do
   end
 
   create_table "solutions", force: :cascade do |t|
-    t.text "content"
+    t.text "content", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "question_id"
-    t.index ["question_id"], name: "index_solutions_on_question_id"
   end
 
   create_table "texts", force: :cascade do |t|
@@ -145,8 +153,8 @@ ActiveRecord::Schema.define(version: 2020_09_04_144235) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "checks", "users"
   add_foreign_key "favorites", "solutions"
   add_foreign_key "favorites", "users"
   add_foreign_key "reads", "users"
-  add_foreign_key "solutions", "questions"
 end
