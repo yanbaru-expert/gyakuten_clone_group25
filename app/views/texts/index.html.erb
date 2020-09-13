@@ -1,5 +1,10 @@
 <h2 class="text-center">テキスト教材</h2>
 <p>サロン特別割引適用パスワード：gyakutenseyo</p>
+<%= form_tag('/texts/search', method: :get) do %>
+  <%= label_tag :教材を探す %>
+  <%= text_field_tag :search_title %>
+  <%= submit_tag '検索' %>
+<% end %>
 <section id="table">
   <table class="table table-striped">
     <thead>
