@@ -1,4 +1,8 @@
-<h2 class="text-center">テキスト教材</h2>
+<h4 >テキスト教材</h4>
+  <%= search_form_for @q do |f| %>
+    <%= f.search_field :title_cont ,placeholder: '教材を探す', size:25 %>
+    <%= f.submit ("探す") , class: 'btn btn-primary' %>
+  <% end %>
 <section id="table">
   <table class="table table-striped">
     <thead>
