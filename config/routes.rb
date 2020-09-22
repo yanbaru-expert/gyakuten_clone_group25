@@ -11,7 +11,9 @@ Rails.application.routes.draw do
     end
   end
   resources :movies
-
+  resources :lines do
+    resource :read, only: :create 
+  end
   resources :texts, only: [:index, :show]
 
   resources :lines
