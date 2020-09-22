@@ -1,1 +1,1 @@
-$("#switch").html("<%= j(render 'reads/check_movie',movie: @movie ) %>")
+$("#ajx_watched_movie_<%= @movie.id %>").html("<%= j(render 'check_movie',movie: @movie ) %>")
