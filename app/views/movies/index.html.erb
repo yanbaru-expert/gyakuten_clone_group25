@@ -11,6 +11,7 @@
           <div class="card-body text-dark">
             <p class="card-text movie-title">Lv.<%= i %>：<%= movie.title %></p>
           </div>
+
           <% if user_signed_in? %>
             <% if movie.like_movied_by?(current_user) %>
               <p><span>いいね！解除: </span><%= link_to movie.like_movies.count, movie_like_movies_path(movie.id), method: :delete %></p>
@@ -20,6 +21,7 @@
           <% else %>
             <p><span>いいね！数: </span><%= movie.like_movies.count %></p>
           <% end %>
+
         </div>
       </div>
     <% end %>
