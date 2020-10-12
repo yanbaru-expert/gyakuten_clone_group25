@@ -14,4 +14,9 @@ class Movie < ApplicationRecord
       where(category: SELECTION_MOVIIES)
     end
   end
+
+  def like_movied_by?(user)
+    like_movies.where(user_id: user.id).exists?
+  end
+
 end
