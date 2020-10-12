@@ -40,8 +40,6 @@
   }
 }
 
-
-
 //アカウント編集ページ
 #account-container {
   width: 60%;
@@ -140,10 +138,10 @@
     margin-bottom: 20px;
   }
 }
+
 //
 
 #questions {
-
   .question {
     padding: 10px;
   }
@@ -156,15 +154,15 @@
   }
 
   a {
-  max-width: 768px;
-  text-decoration: none;
-  display: block;
-  color: #333333;
-  border: solid 2px #505050;
-  border-radius: 10px;
-  transition: .4s;
-  margin-right: auto;
-  margin-left: auto;
+    max-width: 768px;
+    text-decoration: none;
+    display: block;
+    color: #333333;
+    border: solid 2px #505050;
+    border-radius: 10px;
+    transition: 0.4s;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .title {
@@ -174,7 +172,7 @@
 
   .info {
     padding: 10px 10px 10px 20px;
-    color: #BBBBBB;
+    color: #bbbbbb;
   }
 
   .question-container {
@@ -195,12 +193,13 @@
 }
 
 .main {
-  background-color: #5D99FF;
+  background-color: #5d99ff;
 }
 
 .line {
   background-color: #28a745;
 }
+
 //質問詳細ページのview数の表示
 .view-contain {
   position: relative;
@@ -211,12 +210,11 @@
     left: 80%;
     height: 31px;
     padding: 0 5px;
-    border: 1.5px solid #005FFF;
-    background-color: #CCFFFF;
+    border: 1.5px solid #005fff;
+    background-color: #ccffff;
     border-radius: 10% 10%;
   }
 }
-
 
 #line-contents {
   width: 500px;
@@ -243,6 +241,10 @@
   font-size: 1.7rem;
   font-weight: bold;
   padding: 30px 0 15px 0;
+}
+
+#card-title {
+  font-size: 15px;
 }
 
 #already {

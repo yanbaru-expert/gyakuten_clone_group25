@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand" href="#">やんばるCODE</a>
+  <%= link_to 'やんばるCODE', root_path, class: "navbar-brand" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -11,7 +11,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <%= link_to "Ruby/Rails教材", texts_path, class: "dropdown-item"%>
-          <%= link_to "動画教材", root_path, class: "dropdown-item"%>
+          <%= link_to "動画教材", movies_path, class: "dropdown-item"%>
           <%= link_to "AWS講座", aws_texts_path, class: "dropdown-item"%>
           <%= link_to "ライブコーティング", movies_path(category: "Live"), class: "dropdown-item"%>
           <%= link_to "質問集", questions_path , class: "dropdown-item" %>
