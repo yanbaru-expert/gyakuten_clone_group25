@@ -6,7 +6,7 @@ class LikeMoviesController < ApplicationController
   end
 
   def destroy
-    like_movie = LikeMovie.find_by(movie_id: params[:movie_id], user_id: current_user.id)
+    like_movie = current_user.like_movies.find_by(movie_id: params[:movie_id])
     like_movie.destroy
     redirect_to movies_path
   end
