@@ -1,5 +1,5 @@
 class Movie < ApplicationRecord
-  belongs_to :user
+
   has_many :like_movies
   validates :title, presence: true
   validates :url, presence: true
