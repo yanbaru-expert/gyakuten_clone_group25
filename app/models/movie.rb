@@ -1,4 +1,6 @@
 class Movie < ApplicationRecord
+
+  has_many :like_movies
   validates :title, presence: true
   validates :url, presence: true
   validates :category, presence: true
@@ -12,4 +14,9 @@ class Movie < ApplicationRecord
       where(category: SELECTION_MOVIIES)
     end
   end
+
+  def like_movied_by?(user)
+    like_movies.where(user_id: user.id).exists?
+  end
+
 end

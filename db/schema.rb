@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_04_144235) do
+ActiveRecord::Schema.define(version: 2020_10_12_182343) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,6 +81,13 @@ ActiveRecord::Schema.define(version: 2020_09_04_144235) do
     t.index ["impressionable_type", "impressionable_id", "session_hash"], name: "poly_session_index"
     t.index ["impressionable_type", "message", "impressionable_id"], name: "impressionable_type_message_index"
     t.index ["user_id"], name: "index_impressions_on_user_id"
+  end
+
+  create_table "like_movies", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "movie_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "lines", force: :cascade do |t|
