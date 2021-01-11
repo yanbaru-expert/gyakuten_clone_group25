@@ -28,7 +28,7 @@ gem 'activeadmin'
 gem 'devise-bootstrap-views'
 
 #Markdownとシンタックスハイライトの導入
-gem 'redcarpet', '~>2.3.0'
+gem 'redcarpet', '~>3.5.1'
 gem 'coderay'
 
 #質問詳細ページへのPV数の実装
